@@ -3,11 +3,12 @@ import 'dart:math';
 class LogiqueImc {
   final int hauteur;
   final double poids;
-  double _imc = 0.0;
+  double _imc = 0.0; //variable private
 
   LogiqueImc({required this.hauteur, required this.poids});
 
   String calculIMC() {
+    // imc = kg / (metres^2)
     _imc = poids / pow(hauteur / 100, 2);
     return _imc.toStringAsFixed(1);
   }
